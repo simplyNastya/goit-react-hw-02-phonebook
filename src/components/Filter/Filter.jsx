@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './filter.module.css';
 
 const Filter = ({ filter, filterItem }) => {
@@ -18,3 +18,8 @@ const Filter = ({ filter, filterItem }) => {
 };
 
 export default Filter;
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  filterItem: PropTypes.func.isRequired,
+};
