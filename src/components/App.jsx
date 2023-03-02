@@ -12,9 +12,9 @@ export class App extends Component {
 
   formSubmitHandler = ({ name, number }) => {
     if (this.isDublicate(name, number)) {
-      const { name, number } = this.state;
+      const { contacts } = this.state;
+      console.log(contacts);
       alert(`${name} ${number} is already exist`);
-      this.reset();
       return;
     }
     const newContact = {
@@ -29,6 +29,7 @@ export class App extends Component {
 
   isDublicate = (name, number) => {
     const { contacts } = this.state;
+    console.log(contacts);
     const normalizedName = name.toLowerCase();
     const dublicate = contacts.find(item => {
       return (
